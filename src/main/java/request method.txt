@@ -1,0 +1,3 @@
+Request Method
+- GET : 쿼리스트링. Request Body의 내용이 비어있다. URL 브라우저 치고 갈 수 있다.
+- POST 
