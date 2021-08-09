@@ -37,6 +37,7 @@ public class GetMethodQuiz10 extends HttpServlet {
 		}
 		
 		out.print(userId + "님. 환영합니다!");
+		out.print(""); // 이슈를 위한 foo
 
 	}
 }
