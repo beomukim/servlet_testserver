@@ -14,6 +14,7 @@ public class UrlMappingQuiz03 extends HttpServlet {
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		response.setContentType("text/html");
 		response.setCharacterEncoding("UTF-8");
+		
 
 		PrintWriter out = response.getWriter();
 		for (int i = 1; i < 2; i++) {
