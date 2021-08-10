@@ -13,8 +13,7 @@
 	Date current = new Date();
 	SimpleDateFormat time = new SimpleDateFormat("현재 시간은 HH시 mm분 ss초 입니다.");
 	SimpleDateFormat date = new SimpleDateFormat("현재 날짜는 yyyy년 MM월 dd일 입니다.");
-	String str = request.getParameter("type");
-	if (str.equals("time")) {
+	if (request.getParameter("type").equals("time")) {
 		out.print(time.format(current));
 	} else {
 		out.print(date.format(current));
