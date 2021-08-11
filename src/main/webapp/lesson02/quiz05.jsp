@@ -29,12 +29,12 @@
 				<input type="text" name="length" class="form-control col-2"><span
 					class="mt-3">cm</span>
 			</div>
-			<label for="inch">인치<input type="checkbox" name="unit"
-				id="inch" value="inch"></label> <label for="yard">야드<input
-				type="checkbox" name="unit" id="yard" value="yard">
-			</label> <label for="feet">피트<input type="checkbox" name="unit"
-				id="feet" value="feet"></label> <label for="meter">미터<input
-				type="checkbox" name="unit" id="meter" value="meter"></label><br>
+			<label for="in">인치<input type="checkbox" name="unit"
+				id="in" value="in"></label> <label for="yd">야드<input
+				type="checkbox" name="unit" id="yd" value="yd">
+			</label> <label for="ft">피트<input type="checkbox" name="unit"
+				id="ft" value="ft"></label> <label for="m">미터<input
+				type="checkbox" name="unit" id="m" value="m"></label><br>
 			<button type="submit" class="btn btn-success">변환하기</button>
 		</form>
 	</div>
