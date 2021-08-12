@@ -17,7 +17,7 @@
 			<form action="/lesson02/quiz07_1.jsp" method="get">
 				<div class="d-flex">
 					<input type="text" name="menu" class="form-control col-3">
-					<label class="ml-2 align-self-end"><input type="checkbox" value="true" name="starPointFilter"> 4점 이하 제외 </label>
+					<label class="ml-2 align-self-end"><input type="checkbox" value="true" name="pointFilter"> 4점 이하 제외 </label>
 				</div>
 			
 				<div class="mt-3">

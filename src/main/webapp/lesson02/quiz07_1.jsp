@@ -55,7 +55,7 @@
 			map = new HashMap<String, String>() {{ put("name", "반올림피자"); put("menu", "피자"); put("point","4.3");}};
 	
 			boolean pointfour = false;
-			if(request.getParameter("starPointFilter") != null) {
+			if(request.getParameter("pointFilter") != null) {
 				pointfour = true;	
 			}
 			for(Map<String, String> food : list) {
