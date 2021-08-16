@@ -1,7 +1,6 @@
 <%@page import="java.util.Calendar"%>
-<%@page import="java.text.SimpleDateFormat"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -25,21 +24,56 @@
 	crossorigin="anonymous"></script>
 </head>
 <body>
-<%
-	Calendar today = Calendar.getInstance();
-	SimpleDateFormat sdf = new SimpleDateFormat("yyyy년 MM월 dd일");
-	
-%>
 	<div class="container">
-		<h3><b>오늘부터 1일</b></h3>
-		<%
-			for (int i = 1; i <= 10; i++) {
-			today.add(Calendar.DATE, 100);
-		%>
-		<h2><b><%= i*100 %>일 : <span class="text-danger"><%= sdf.format(today.getTime()) %></span></b></h2>
-		<%
-			}
-		%>
+		<h1 class="text-center">2021-8</h1>
+		<table class="table text-center">
+			<thead>
+				<tr>
+					<td class="text-danger">일</td>
+					<td>월</td>
+					<td>화</td>
+					<td>수</td>
+					<td>목</td>
+					<td>금</td>
+					<td>토</td>
+				</tr>
+			</thead>
+			<tbody>
+				<%
+				Calendar cal = Calendar.getInstance();
+				cal.set(Calendar.YEAR, 2021);
+				cal.set(Calendar.MONTH, 8);
+				cal.set(2021, 8 - 1, 1);
+				int end = cal.getActualMaximum(Calendar.DATE);
+				int dayOfWeek = cal.get(Calendar.DAY_OF_WEEK);
+				%>
+				<tr>
+					<%
+					for (int i = 1; i <= end; i++) {
+						if (i == 1) {
+							for (int j = i; j < dayOfWeek; j++) {
+					%>
+					<td></td>
+					<%
+					}
+					}
+					%>
+					<td><%=i%></td>
+					<%
+					if (dayOfWeek % 7 == 0) {
+					%>
+				</tr>
+				<tr>
+					<%
+					}
+					dayOfWeek++;
+					}
+					%>
+				
+			</tbody>
+		</table>
+
 	</div>
+
 </body>
 </html>
